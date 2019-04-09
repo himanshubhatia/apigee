@@ -1,0 +1,28 @@
+.navigation
+{
+    margin-left: 25%;
+    height:200px;
+    display: block;
+
+
+}
+.DaimlerMenu
+{
+    display: inline;
+    list-style: none;
+    font-size: x-large;
+    font-weight: bold;
+    color:black;
+    margin-right: 3%;
+    margin-left: 3%;
+
+}
+.DaimlerMenu a
+{
+    text-decoration: none;
+}
+.DaimlerMenu a:hover
+{
+    background-color: black;
+    color: white;
+}

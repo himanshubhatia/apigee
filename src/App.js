@@ -1,26 +1,52 @@
 import React, { Component } from 'react';
+import Header from './layout/header';
+import Footer from './layout/footer';
 import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  constructor(props)
+  {
+      super(props)
+      console.log('[App.js] called from constructor' );
+  }
+
+  componentWillMount()
+  {
+      console.log('[App.js] called from component will mount' );
+  }
+
+  componentDidMount()
+  {
+
+          console.log('[App.js] called from component did mount' );
+
+  }
+  state={
+    menuItems:[
+        {
+            id:1,name:"Dashboard"
+        },
+        {
+            id:2,name:"AboutUs"
+        },
+        {
+            id:3,name:"ContactUs"
+        }
+       
+    ]
+}
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+      <div >
+        <header>
+         <h2 className='App'>Welcome to React</h2>
+         <Header items={this.state.menuItems} />
         </header>
+        <Footer />
       </div>
+      
     );
   }
 }
